@@ -31,7 +31,7 @@ static cocos2d::Application *s_target = nullptr;
 static GPRemoteNotificationCallFunc s_selector = nullptr;
 
 extern "C" {
-JNIEXPORT void JNICALL Java_com_growthpush_cocos2dx_Cocos2dxBridge_didReceiveRemoteNotification(JNIEnv *env, jobject thiz, jstring jJson) {
+JNIEXPORT void JNICALL Java_com_growthpush_cocos2dx_Cocos2dxBridge_didOpenRemoteNotification(JNIEnv *env, jobject thiz, jstring jJson) {
     // FIXME: for C++11
 
     /*

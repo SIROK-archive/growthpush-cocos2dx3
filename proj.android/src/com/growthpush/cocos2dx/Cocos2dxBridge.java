@@ -11,7 +11,7 @@ public class Cocos2dxBridge extends ExternalFrameworkBridge {
 		Cocos2dxGLSurfaceView.getInstance().queueEvent(new Runnable() {
 			@Override
 			public void run() {
-				didReceiveRemoteNotification(customFiled);
+				didOpenRemoteNotification(customFiled);
 			}
 		});
 	}
@@ -21,6 +21,6 @@ public class Cocos2dxBridge extends ExternalFrameworkBridge {
 	 * 
 	 * @param json json string
 	 */
-	static native void didReceiveRemoteNotification(String json);
+	static native void didOpenRemoteNotification(String json);
 
 }
