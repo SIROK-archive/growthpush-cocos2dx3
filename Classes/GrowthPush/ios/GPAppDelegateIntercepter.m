@@ -14,7 +14,7 @@
 
 @implementation GPAppDelegateIntercepter
 
-- (BOOL) willPerformApplication:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+- (BOOL) didPerformApplication:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     return [GrowthPushCCInternal application:application didFinishLaunchingWithOptions:launchOptions];
 }
 
