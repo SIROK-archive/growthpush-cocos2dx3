@@ -21,12 +21,16 @@
     [super setUp];
 }
 
--(void)setUp {
-    [super setUp];
-    [[self class] waitOperation:30];
++(void)tearDown {
+    [super tearDown];
 }
 
-+(void)tearDown {
+-(void)setUp {
+    [super setUp];
+    [[self class] waitOperation];
+}
+
+-(void)tearDown {
     [super tearDown];
 }
 
@@ -36,7 +40,10 @@
 
     growthpush::GrowthPush::initialize(APPLICATION_ID, APPLICATION_SECRET, growthpush::GPEnvironment::GPEnvironmentDevelopment, true);
     growthpush::GrowthPush::registerDeviceToken(SENDER_ID);
-    [[self class] waitClient:30];
+    [[self class] waitClient];
+    
+    XCTAssertEqual(GPEnvironmentDevelopment, [[[GrowthPush sharedInstance] client] environment]);
+
 
 }
 
@@ -46,7 +53,9 @@
 
     growthpush::GrowthPush::initialize(APPLICATION_ID, APPLICATION_SECRET, growthpush::GPEnvironment::GPEnvironmentProduction, true);
     growthpush::GrowthPush::registerDeviceToken(SENDER_ID);
-    [[self class] waitClient:30];
+    [[self class] waitClient];
+    
+    XCTAssertEqual(GPEnvironmentProduction, [[[GrowthPush sharedInstance] client] environment]);
 
 }
 

@@ -23,33 +23,64 @@
 
     growthpush::GrowthPush::initialize(APPLICATION_ID, APPLICATION_SECRET, growthpush::GPEnvironment::GPEnvironmentDevelopment, true);
     growthpush::GrowthPush::registerDeviceToken(SENDER_ID);
-    [self waitClient:30];
+    [self waitClient];
 
-}
-
--(void)setUp {
-    [super setUp];
-    [[self class] waitOperation:30];
 }
 
 +(void)tearDown {
     [super tearDown];
 }
 
+-(void)setUp {
+    [super setUp];
+    [[self class] waitOperation];
+}
+
+-(void)tearDown {
+    [super tearDown];
+}
+
 -(void)testSetDeviceTags {
+    
     growthpush::GrowthPush::setDeviceTags();
+    [[self class] waitOperation];
+    
+    XCTAssertNotNil([[[GrowthPush sharedInstance] tags] objectForKey:@"OS"]);
+    XCTAssertNotNil([[[GrowthPush sharedInstance] tags] objectForKey:@"Version"]);
+    XCTAssertNotNil([[[GrowthPush sharedInstance] tags] objectForKey:@"Language"]);
+    XCTAssertNotNil([[[GrowthPush sharedInstance] tags] objectForKey:@"Time Zone"]);
+    XCTAssertNotNil([[[GrowthPush sharedInstance] tags] objectForKey:@"Device"]);
+    XCTAssertNotNil([[[GrowthPush sharedInstance] tags] objectForKey:@"Build"]);
+    
 }
 
 -(void)testSetTag {
+    
+    XCTAssertNil([[[GrowthPush sharedInstance] tags] objectForKey:@"Payed User"]);
     growthpush::GrowthPush::setTag("Payed User");
+    
+    [[self class] waitOperation];
+    XCTAssertNotNil([[[GrowthPush sharedInstance] tags] objectForKey:@"Payed User"]);
+    
 }
 
 -(void)testSetTagWithInvalidName {
+    
+    NSUInteger tagsCount = [[[GrowthPush sharedInstance] tags] count];
     growthpush::GrowthPush::setTag("");
+    
+    [[self class] waitOperation];
+    XCTAssertEqual([[[GrowthPush sharedInstance] tags] count], tagsCount);
+    
 }
 
 -(void)testSetTagWithValue {
+    XCTAssertNil([[[GrowthPush sharedInstance] tags] objectForKey:@"Gender"]);
     growthpush::GrowthPush::setTag("Gender", "male");
+    
+    [[self class] waitOperation];
+    XCTAssertNotNil([[[GrowthPush sharedInstance] tags] objectForKey:@"Gender"]);
+    
 }
 
 @end

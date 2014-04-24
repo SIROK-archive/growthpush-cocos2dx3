@@ -17,81 +17,77 @@
 
 static NSString *const kGPPreferenceFileName = @"growthpush-preferences";
 
-@interface GPClient
-
-@end
-
-@interface GPPreference : NSObject
-
-+(GPPreference *)sharedInstance;
-
-@end
-
 @implementation GrowthPushTestCase
 
-+(GrowthPush *)growthPush {
-    return [[GrowthPush class] performSelector:@selector(sharedInstance)];
++ (GPClient *) client {
+    return [[GrowthPush sharedInstance] client];
 }
 
-+(GPClient *)client {
-    return [[self growthPush] performSelector:@selector(client)];
-}
-
-+(void)initialize {
-
++ (void) initialize {
+    
     [self initializePreference];
     [self initializeGrowthPush];
-
+    
 }
 
-+(void)initializePreference {
-
++ (void) initializePreference {
+    
     NSArray *urls = [[NSFileManager defaultManager] URLsForDirectory:NSLibraryDirectory inDomains:NSUserDomainMask];
     NSURL *fileUrl = [NSURL URLWithString:kGPPreferenceFileName relativeToURL:[urls lastObject]];
-
+    
     [[NSFileManager defaultManager] removeItemAtURL:fileUrl error:nil];
-
+    
 }
 
-+(void)initializeGrowthPush {
-
-    [[self growthPush] performSelector:@selector(setClient:) withObject:nil];
-    [[self growthPush] performSelector:@selector(setTags:) withObject:nil];
-
++ (void) initializeGrowthPush {
+    
+    [[GrowthPush sharedInstance] setClient:nil];
+    [[GrowthPush sharedInstance] setTags:nil];
+    
 }
 
-+(void)waitOperation:(NSInteger)second {
++ (void) waitOperation {
+    [self waitOperation:30];
+}
 
++ (void) waitOperation:(NSInteger)second {
+    
     for (int i = 0; i < second; i++) {
-        if ([[[NSOperationQueue mainQueue] operations] count] == 0) return;
-
+        if ([[[NSOperationQueue mainQueue] operations] count] == 0) {
+            return;
+        }
         [self sleep:1];
     }
-
-    [[NSException exceptionWithName:@"TimeoutException" reason:@"Waiting client timeout." userInfo:nil] raise];
-
+    
+    [[NSException exceptionWithName:@"TimeoutException" reason:@"Waiting operation timeout." userInfo:nil] raise];
+    
 }
 
-+(void)waitClient:(NSInteger)second {
++ (void) waitClient {
+    [self waitClient:30];
+}
 
++ (void) waitClient:(NSInteger)second {
+    
     for (int i = 0; i < second; i++) {
-        if ([self client]) return;
-
+        if ([self client]) {
+            return;
+        }
         [self sleep:1];
     }
-
+    
     [[NSException exceptionWithName:@"TimeoutException" reason:@"Waiting client timeout." userInfo:nil] raise];
-
+    
 }
 
-+(void)sleep:(NSTimeInterval)second {
-
++ (void) sleep:(NSTimeInterval)second {
+    
     NSDate *begin = [NSDate date];
-
+    
     while ([[NSDate date] timeIntervalSinceDate:begin] < second) {
         [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.01f]];
     }
-
+    
 }
 
 @end

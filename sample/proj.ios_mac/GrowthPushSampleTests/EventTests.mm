@@ -23,16 +23,20 @@
 
     growthpush::GrowthPush::initialize(APPLICATION_ID, APPLICATION_SECRET, growthpush::GPEnvironment::GPEnvironmentDevelopment, true);
     growthpush::GrowthPush::registerDeviceToken(SENDER_ID);
-    [self waitClient:30];
+    [self waitClient];
 
+}
+
++(void)tearDown {
+    [super tearDown];
 }
 
 -(void)setUp {
     [super setUp];
-    [[self class] waitOperation:30];
+    [[self class] waitOperation];
 }
 
-+(void)tearDown {
+-(void)tearDown {
     [super tearDown];
 }
 
