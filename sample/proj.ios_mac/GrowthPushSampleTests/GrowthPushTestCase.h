@@ -8,9 +8,9 @@
 
 #import <XCTest/XCTest.h>
 
-#define APPLICATION_ID (1074)
+#define APPLICATION_ID     (1074)
 #define APPLICATION_SECRET ("sH2RhzDPNZKmXAKwqtG6pHNvDalIGk54")
-#define SENDER_ID ("870898687785")
+#define SENDER_ID          ("870898687785")
 
 @interface GrowthPushTestCase : XCTestCase
 

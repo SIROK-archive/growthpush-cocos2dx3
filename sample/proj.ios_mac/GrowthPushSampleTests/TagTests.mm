@@ -1,4 +1,5 @@
 //
+
 //  TagTests.m
 //  GrowthPushSample
 //
@@ -11,49 +12,43 @@
 
 # include "GrowthPush.h"
 
-#import "TagTests.h"
+# import "TagTests.h"
 
 @implementation TagTests
 
-+ (void)setUp
-{
++(void)setUp {
     [super setUp];
-    
+
     [self initialize];
-    
+
     growthpush::GrowthPush::initialize(APPLICATION_ID, APPLICATION_SECRET, growthpush::GPEnvironment::GPEnvironmentDevelopment, true);
     growthpush::GrowthPush::registerDeviceToken(SENDER_ID);
     [self waitClient:30];
-    
+
 }
 
-- (void)setUp {
+-(void)setUp {
     [super setUp];
     [[self class] waitOperation:30];
 }
 
-+ (void)tearDown
-{
++(void)tearDown {
     [super tearDown];
 }
 
-- (void)testSetDeviceTags
-{
+-(void)testSetDeviceTags {
     growthpush::GrowthPush::setDeviceTags();
 }
 
-- (void)testSetTag
-{
+-(void)testSetTag {
     growthpush::GrowthPush::setTag("Payed User");
 }
 
-- (void)testSetTagWithInvalidName
-{
+-(void)testSetTagWithInvalidName {
     growthpush::GrowthPush::setTag("");
 }
 
-- (void)testSetTagWithValue
-{
+-(void)testSetTagWithValue {
     growthpush::GrowthPush::setTag("Gender", "male");
 }
 

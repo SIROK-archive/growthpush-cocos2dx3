@@ -73,9 +73,10 @@ static void (^s_didReceiveRemoteNotificationBlock)(NSString *json) = NULL;
 
     NSDictionary *userInfo = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
 
-    if (userInfo)
+    if (userInfo) {
         [self invokeLaunchWithNotificationCallback:userInfo];
-    
+    }
+
     return YES;
 
 }
@@ -90,25 +91,27 @@ static void (^s_didReceiveRemoteNotificationBlock)(NSString *json) = NULL;
 
 + (void) application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
 
-     if(application.applicationState == UIApplicationStateActive)
-         return;
-    
+    if (application.applicationState == UIApplicationStateActive) {
+        return;
+    }
+
     [self invokeLaunchWithNotificationCallback:userInfo];
-    
+
 }
 
 + (void) invokeLaunchWithNotificationCallback:(NSDictionary *)userInfo {
-    
-    if (!s_didReceiveRemoteNotificationBlock)
+
+    if (!s_didReceiveRemoteNotificationBlock) {
         return;
-    
+    }
+
     NSError *error = nil;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:userInfo options:0 error:&error];
     if (error) {
         NSLog(@"failed to parse json: error=%@", [error description]);
         return;
     }
-    
+
     NSString *json = [[[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding] autorelease];
     if (json) {
         s_didReceiveRemoteNotificationBlock(json);

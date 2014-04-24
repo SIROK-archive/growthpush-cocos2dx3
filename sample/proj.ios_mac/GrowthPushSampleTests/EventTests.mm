@@ -1,4 +1,5 @@
 //
+
 //  EventTests.m
 //  GrowthPushSample
 //
@@ -11,44 +12,39 @@
 
 # include "GrowthPush.h"
 
-#import "EventTests.h"
+# import "EventTests.h"
 
 @implementation EventTests
 
-+ (void)setUp
-{
++(void)setUp {
     [super setUp];
-    
+
     [self initialize];
-    
+
     growthpush::GrowthPush::initialize(APPLICATION_ID, APPLICATION_SECRET, growthpush::GPEnvironment::GPEnvironmentDevelopment, true);
     growthpush::GrowthPush::registerDeviceToken(SENDER_ID);
     [self waitClient:30];
-    
+
 }
 
-- (void)setUp {
+-(void)setUp {
     [super setUp];
     [[self class] waitOperation:30];
 }
 
-+ (void)tearDown
-{
++(void)tearDown {
     [super tearDown];
 }
 
-- (void)testTrackEvent
-{
+-(void)testTrackEvent {
     growthpush::GrowthPush::trackEvent("Launch");
 }
 
-- (void)testTrackEventWithInvalidName
-{
+-(void)testTrackEventWithInvalidName {
     growthpush::GrowthPush::trackEvent("");
 }
 
-- (void)testTrackEventWithValue
-{
+-(void)testTrackEventWithValue {
     growthpush::GrowthPush::trackEvent("Payment", "500");
 }
 

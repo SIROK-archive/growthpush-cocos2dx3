@@ -19,7 +19,7 @@ NS_GROWTHPUSH_BEGIN
 class GPJsonHelper
 {
 public:
-    
+
 /**
  * Parse JSON string to Value.
  *
@@ -37,7 +37,7 @@ static cocos2d::Value parseJson2Value(const std::string &json){
 }
 
 private:
-    
+
 static cocos2d::Value convertJson2Value(const rapidjson::Value &v){
 
     if (v.IsObject()) {
@@ -80,7 +80,7 @@ static cocos2d::Value convertJson2Map(const rapidjson::Value &v){
 }
 
 static cocos2d::Value convertJson2Vector(const rapidjson::Value &v){
-    
+
     cocos2d::ValueVector array;
 
     for (rapidjson::Value::ConstValueIterator it = v.onBegin(); it != v.onEnd(); ++it) {
@@ -100,11 +100,11 @@ static cocos2d::Value convertJson2String(const rapidjson::Value &v){
 }
 
 static cocos2d::Value convertJson2Int(const rapidjson::Value &v){
-    
+
     int d = v.GetInt();
-    
+
     return cocos2d::Value(d);
-    
+
 }
 
 static cocos2d::Value convertJson2Double(const rapidjson::Value &v){

@@ -1,4 +1,5 @@
 //
+
 //  GrowthPushTests.m
 //  GrowthPushSample
 //
@@ -10,47 +11,43 @@
 #if CC_TARGET_PLATFORM == CC_PLATFORM_IOS
 
 # include "GrowthPush.h"
-#include "GPEnvironment.h"
+# include "GPEnvironment.h"
 
-#import "GrowthPushTests.h"
+# import "GrowthPushTests.h"
 
 @implementation GrowthPushTests
 
-+ (void)setUp
-{
++(void)setUp {
     [super setUp];
 }
 
-- (void)setUp {
+-(void)setUp {
     [super setUp];
     [[self class] waitOperation:30];
 }
 
-+ (void)tearDown
-{
++(void)tearDown {
     [super tearDown];
 }
 
-- (void)testRegisterWithDevelopment
-{
-    
+-(void)testRegisterWithDevelopment {
+
     [[self class] initialize];
-    
+
     growthpush::GrowthPush::initialize(APPLICATION_ID, APPLICATION_SECRET, growthpush::GPEnvironment::GPEnvironmentDevelopment, true);
     growthpush::GrowthPush::registerDeviceToken(SENDER_ID);
     [[self class] waitClient:30];
-    
+
 }
 
-- (void)testRegisterWithProduction
-{
-    
+-(void)testRegisterWithProduction {
+
     [[self class] initialize];
-    
+
     growthpush::GrowthPush::initialize(APPLICATION_ID, APPLICATION_SECRET, growthpush::GPEnvironment::GPEnvironmentProduction, true);
     growthpush::GrowthPush::registerDeviceToken(SENDER_ID);
     [[self class] waitClient:30];
-    
+
 }
 
 @end

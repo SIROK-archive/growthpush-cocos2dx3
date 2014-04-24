@@ -61,7 +61,7 @@ static AppDelegate s_sharedApplication;
     if ([[UIDevice currentDevice].systemVersion floatValue] < 6.0) {
         // warning: addSubView doesn't work on iOS6
         [window addSubview:_viewController.view];
-    } else {
+    } else   {
         // use this method on ios6
         [window setRootViewController:_viewController];
     }
@@ -132,10 +132,8 @@ static AppDelegate s_sharedApplication;
 }
 
 -(void)dealloc {
-
     [window release];
     [super dealloc];
-
 }
 
 @end

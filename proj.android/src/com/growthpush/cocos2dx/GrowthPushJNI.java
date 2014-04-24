@@ -5,11 +5,8 @@ import com.growthpush.GrowthPush;
 import com.growthpush.model.Environment;
 
 public class GrowthPushJNI {
-	static Context mContext = null;
 
-	public GrowthPushJNI(Context context) {
-		mContext = context;
-	}
+	static Context mContext = null;
 
 	public static void initialize(int applicationId, final String secret, int environment, boolean debug) {
 		initialize(applicationId, secret, environment, debug, 0);
@@ -41,6 +38,10 @@ public class GrowthPushJNI {
 
 	public static void setDeviceTags() {
 		GrowthPush.getInstance().setDeviceTags();
+	}
+
+	public static void setContext(Context context) {
+		mContext = context;
 	}
 
 	public static void callTrackGrowthPushMessage() {
