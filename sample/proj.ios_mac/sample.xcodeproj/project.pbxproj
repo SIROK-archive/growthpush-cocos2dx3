@@ -191,7 +191,7 @@
 		1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseSelected.png; sourceTree = "<group>"; };
 		1AFAF8BB16D35E4900DB1158 /* HelloWorld.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HelloWorld.png; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		1D6058910D05DD3D006BFB54 /* sampleProject iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sampleProject iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6058910D05DD3D006BFB54 /* sample iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sample iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2402F00E1905CB3400EBFC9A /* cocos2d_libs.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d_libs.xcodeproj; path = "../../submodules/cocos2d-x/build/cocos2d_libs.xcodeproj"; sourceTree = "<group>"; };
 		2464A0D8190527D000432B9E /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/OpenGLES.framework; sourceTree = DEVELOPER_DIR; };
 		2464A0DA190527D400432B9E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -220,7 +220,7 @@
 		503AE10417EB98FF00D1A890 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Prefix.pch; path = mac/Prefix.pch; sourceTree = "<group>"; };
 		503AE11117EB99EE00D1A890 /* libcurl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurl.dylib; path = usr/lib/libcurl.dylib; sourceTree = SDKROOT; };
 		503AE11A17EB9C5A00D1A890 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
-		5087E76F17EB910900C73F5D /* sampleProject Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sampleProject Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5087E76F17EB910900C73F5D /* sample Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sample Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5087E77217EB970100C73F5D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		5087E77317EB970100C73F5D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		5087E77417EB970100C73F5D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -331,8 +331,8 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D6058910D05DD3D006BFB54 /* sampleProject iOS.app */,
-				5087E76F17EB910900C73F5D /* sampleProject Mac.app */,
+				1D6058910D05DD3D006BFB54 /* sample iOS.app */,
+				5087E76F17EB910900C73F5D /* sample Mac.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -491,9 +491,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1D6058900D05DD3D006BFB54 /* sampleProject iOS */ = {
+		1D6058900D05DD3D006BFB54 /* sample iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "sampleProject iOS" */;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "sample iOS" */;
 			buildPhases = (
 				1D60588D0D05DD3D006BFB54 /* Resources */,
 				1D60588E0D05DD3D006BFB54 /* Sources */,
@@ -508,14 +508,14 @@
 				2402F0431905D2EA00EBFC9A /* PBXTargetDependency */,
 				2402F0321905CDC900EBFC9A /* PBXTargetDependency */,
 			);
-			name = "sampleProject iOS";
+			name = "sample iOS";
 			productName = iphone;
-			productReference = 1D6058910D05DD3D006BFB54 /* sampleProject iOS.app */;
+			productReference = 1D6058910D05DD3D006BFB54 /* sample iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5087E73D17EB910900C73F5D /* sampleProject Mac */ = {
+		5087E73D17EB910900C73F5D /* sample Mac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5087E76C17EB910900C73F5D /* Build configuration list for PBXNativeTarget "sampleProject Mac" */;
+			buildConfigurationList = 5087E76C17EB910900C73F5D /* Build configuration list for PBXNativeTarget "sample Mac" */;
 			buildPhases = (
 				5087E74817EB910900C73F5D /* Resources */,
 				5087E75617EB910900C73F5D /* Sources */,
@@ -525,9 +525,9 @@
 			);
 			dependencies = (
 			);
-			name = "sampleProject Mac";
+			name = "sample Mac";
 			productName = iphone;
-			productReference = 5087E76F17EB910900C73F5D /* sampleProject Mac.app */;
+			productReference = 5087E76F17EB910900C73F5D /* sample Mac.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -543,7 +543,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "sampleProject" */;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "sample" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -563,8 +563,8 @@
 			);
 			projectRoot = "";
 			targets = (
-				1D6058900D05DD3D006BFB54 /* sampleProject iOS */,
-				5087E73D17EB910900C73F5D /* sampleProject Mac */,
+				1D6058900D05DD3D006BFB54 /* sample iOS */,
+				5087E73D17EB910900C73F5D /* sample Mac */,
 			);
 		};
 /* End PBXProject section */
@@ -776,6 +776,7 @@
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = "";
+				PRODUCT_NAME = "sample iOS";
 				PROVISIONING_PROFILE = "8668D93E-131F-4841-B50E-BB8D7D3F29CD";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -816,6 +817,7 @@
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = "";
+				PRODUCT_NAME = "sample iOS";
 				PROVISIONING_PROFILE = "8668D93E-131F-4841-B50E-BB8D7D3F29CD";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -848,6 +850,7 @@
 				);
 				INFOPLIST_FILE = mac/Info.plist;
 				LIBRARY_SEARCH_PATHS = "";
+				PRODUCT_NAME = "sample Mac";
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
@@ -875,6 +878,7 @@
 				);
 				INFOPLIST_FILE = mac/Info.plist;
 				LIBRARY_SEARCH_PATHS = "";
+				PRODUCT_NAME = "sample Mac";
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
@@ -943,7 +947,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "sampleProject iOS" */ = {
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "sample iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
@@ -952,7 +956,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		5087E76C17EB910900C73F5D /* Build configuration list for PBXNativeTarget "sampleProject Mac" */ = {
+		5087E76C17EB910900C73F5D /* Build configuration list for PBXNativeTarget "sample Mac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5087E76D17EB910900C73F5D /* Debug */,
@@ -961,7 +965,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "sampleProject" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "sample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,

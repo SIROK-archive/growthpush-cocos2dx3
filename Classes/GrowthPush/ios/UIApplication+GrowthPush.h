@@ -1,6 +1,5 @@
 //
 //  UIApplication+GrowthPush.h
-//  sampleProject
 //
 //  Created by Kataoka Naoyuki on 2014/04/24.
 //
