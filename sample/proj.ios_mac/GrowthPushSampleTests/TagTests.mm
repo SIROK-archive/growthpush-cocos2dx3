@@ -22,6 +22,7 @@
     [self initialize];
     
     growthpush::GrowthPush::initialize(APPLICATION_ID, APPLICATION_SECRET, growthpush::GPEnvironment::GPEnvironmentDevelopment, true);
+    growthpush::GrowthPush::registerDeviceToken(SENDER_ID);
     [self waitClient:30];
     
 }
