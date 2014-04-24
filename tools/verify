@@ -1,85 +1,69 @@
-#!/usr/bin/php
-<?php
+#!/bin/bash
 
-define('ROOT_DIR', dirname(dirname(__FILE__)) . "/src/");
+TOOL_DIR=`dirname $0`
+ROOT_DIR="${TOOL_DIR}/../"
+FILES=( \ 
+	'Classes' \ 
+	'proj.android' \ 
+	'README.md' \ 
+	'LICENSE' \ 
+	'CHANGES' \ 
+)
 
-$needed_files = array(
-	'GrowthPush.cpp',
-	'EGPOption.h',
-	'GPEnvironment.h',
-	'GPJsonHelper.h',
-	'GPMacros.h',
-	'GrowthPush.h',
-	'GrowthPush.mm',
-	'GrowthPushCCInternal.h',
-	'GrowthPushCCInternal.m',
-	'UIApplication+GrowthPushCCInternal.h',
-	'UIApplication+GrowthPushCCInternal.m',
-	'GPCocos2dxActivity.java',
-	'GPCocos2dxBroadcastReceiver.java',
-	'GrowthPushJNI.java',
-	'OptionJNI.java'
-);
+for FILE in ${FILES[@]}; do
+	echo -n "Check ${FILE}... "
+	if [ -f ${ROOT_DIR}/${FILE} ]; then
+		echo 'exists.'
+	elif [ -d ${ROOT_DIR}/${FILE} ]; then
+		echo 'exists.'
+	else
+		echo 'does NOT exist.'
+		echo '[FATAL] Failed to verify package.'
+		exit 1;
+	fi
+done
 
-$acceptable_extensions = array();
-foreach ($needed_files as $needed_file) {
-	$acceptable_extensions[] = pathinfo($needed_file, PATHINFO_EXTENSION);
-}
-$acceptable_extensions = array_unique($acceptable_extensions);
+C_CLASSES=( \ 
+	'GPEnvironment.h' \ 
+	'GPJsonHelper.h' \ 
+	'GPMacros.h' \ 
+	'GrowthPush.h' \ 
+	'ios/GPAppDelegateIntercepter.h' \ 
+	'ios/GPAppDelegateIntercepter.m' \ 
+	'ios/GPAppDelegateWrapper.h' \ 
+	'ios/GPAppDelegateWrapperDelegate.h' \ 
+	'ios/GrowthPushCCInternal.h' \ 
+	'ios/GrowthPushCCInternal.m' \ 
+	'ios/GrowthPush.mm' \ 
+	'ios/UIApplication+GrowthPush.h' \ 
+	'ios/UIApplication+GrowthPush.m' \ 
+	'android/GrowthPush.cpp' \ 
+)
 
-function list_files($directory, $acceptable_extensions) {
+for CLASS in ${C_CLASSES[@]}; do
+	echo -n "Check ${CLASS}... "
+	if [ -f ${ROOT_DIR}/Classes/GrowthPush/${CLASS} ]; then
+		echo 'exists.'
+	else
+		echo 'does NOT exist.'
+		echo '[FATAL] Failed to verify package.'
+		exit 1;
+	fi
+done
 
-	$files = array();
-	$file_names = scandir($directory);
+JAVA_CLASSES=( \ 
+	'com/growthpush/cocos2dx/Cocos2dxBridge.java' \ 
+	'com/growthpush/cocos2dx/Cocos2dxBroadcastReceiver.java' \ 
+	'com/growthpush/cocos2dx/GrowthPushJNI.java' \ 
+)
 
-	foreach ($file_names as $file_name) {
-
-		if ($file_name === '.' || $file_name === '..')
-			continue;
-
-		if ($file_name === 'sampleProject')
-			continue;
-
-		if (is_file($directory . $file_name)) {
-
-			if (!in_array(pathinfo($file_name, PATHINFO_EXTENSION), $acceptable_extensions))
-				continue;
-
-			$files[] = $file_name;
-			continue;
-
-		}
-
-		if (is_dir($directory . $file_name)) {
-			$files = array_merge($files, list_files($directory . $file_name . '/', $acceptable_extensions));
-			continue;
-		}
-	}
-
-	return $files;
-
-}
-
-function checkFile($needed_files, $existed_files) {
-
-	foreach ($needed_files as $needed_file) {
-
-		echo "Check ${needed_file}... => ";
-		if (!in_array($needed_file, $existed_files)) {
-			echo "not exists.\n";
-			return false;
-		}
-
-		echo "exists.\n";
-
-	}
-
-	return true;
-
-}
-
-if (checkFile($needed_files, list_files(ROOT_DIR, $acceptable_extensions))) {
-	echo "[SUCCESS] Completed to verify package.\n";
-} else {
-	echo "[FATAL] Failed to verify package.\n";
-}
+for CLASS in ${JAVA_CLASSES[@]}; do
+	echo -n "Check ${CLASS}... "
+	if [ -f ${ROOT_DIR}/proj.android/src/${CLASS} ]; then
+		echo 'exists.'
+	else
+		echo 'does NOT exist.'
+		echo '[FATAL] Failed to verify package.'
+		exit 1;
+	fi
+done
