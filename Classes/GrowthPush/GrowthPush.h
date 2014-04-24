@@ -94,8 +94,8 @@ static void clearBadge(void);
  * @param selector The callback function which will be invoked when the specified notification event was posted.
  */
 // FIXME: for C++11
-// static void launchWithNotification(const gpDidReceiveRemoteNotificationCallback &callback);
-static void launchWithNotification(cocos2d::Application *target, GPRemoteNotificationCallFunc selector);
+// static void setOpenNotificationCallback(const gpDidReceiveRemoteNotificationCallback &callback);
+static void setOpenNotificationCallback(cocos2d::Application *target, GPRemoteNotificationCallFunc selector);
 
 private:
 GrowthPush(void);

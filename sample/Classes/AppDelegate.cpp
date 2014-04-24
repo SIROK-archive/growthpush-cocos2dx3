@@ -37,7 +37,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     GrowthPush::trackEvent("Launch");
     GrowthPush::setDeviceTags();
     GrowthPush::clearBadge();
-    GrowthPush::launchWithNotification(this, gp_remote_notification_selector(AppDelegate::didLaunchWithNotification));
+    GrowthPush::setOpenNotificationCallback(this, gp_remote_notification_selector(AppDelegate::didLaunchWithNotification));
 
     return true;
 }

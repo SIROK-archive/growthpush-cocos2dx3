@@ -1,19 +1,16 @@
 package com.growthpush.cocos2dx;
 
 import android.content.Context;
+
 import com.growthpush.GrowthPush;
 import com.growthpush.model.Environment;
 
 public class GrowthPushJNI {
 
-	static Context mContext = null;
+	private static Context context = null;
 
 	public static void initialize(int applicationId, final String secret, int environment, boolean debug) {
-		initialize(applicationId, secret, environment, debug, 0);
-	}
-
-	public static void initialize(int applicationId, final String secret, int environment, boolean debug, int option) {
-		GrowthPush.getInstance().initialize(mContext, applicationId, secret, convertIntToEnvironment(environment), debug);
+		GrowthPush.getInstance().initialize(context, applicationId, secret, convertIntToEnvironment(environment), debug);
 	}
 
 	public static void register(final String senderId) {
@@ -41,10 +38,7 @@ public class GrowthPushJNI {
 	}
 
 	public static void setContext(Context context) {
-		mContext = context;
-	}
-
-	public static void callTrackGrowthPushMessage() {
+		GrowthPushJNI.context = context;
 	}
 
 	public static Environment convertIntToEnvironment(int environment) {
