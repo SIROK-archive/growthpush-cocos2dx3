@@ -68,16 +68,13 @@
 		50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF629517ECD46A001EB2F8 /* Icon-100.png */; };
 		50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF62A017ECD613001EB2F8 /* Icon-29.png */; };
 		50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF62A117ECD613001EB2F8 /* Icon-50.png */; };
-		B2BECE4819087DDE00D87478 /* GrowthPush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2BECE4719087DDE00D87478 /* GrowthPush.framework */; };
-		B2BECE4B19087EBC00D87478 /* UIApplication+GrowthPush.m in Sources */ = {isa = PBXBuildFile; fileRef = B2BECE4A19087EBC00D87478 /* UIApplication+GrowthPush.m */; };
-		B2BECE5019087F9400D87478 /* GPAppDelegateIntercepter.m in Sources */ = {isa = PBXBuildFile; fileRef = B2BECE4F19087F9400D87478 /* GPAppDelegateIntercepter.m */; };
 		B2DA4A47190929130040CF3C /* EventTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = B2DA4A40190929130040CF3C /* EventTests.mm */; };
 		B2DA4A48190929130040CF3C /* GrowthPushTestCase.mm in Sources */ = {isa = PBXBuildFile; fileRef = B2DA4A42190929130040CF3C /* GrowthPushTestCase.mm */; };
 		B2DA4A49190929130040CF3C /* GrowthPushTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = B2DA4A44190929130040CF3C /* GrowthPushTests.mm */; };
 		B2DA4A4A190929130040CF3C /* TagTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = B2DA4A46190929130040CF3C /* TagTests.mm */; };
 		B2EBC1DA1909248300387B71 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2EBC1D91909248300387B71 /* XCTest.framework */; };
 		B2EBC1DB1909248300387B71 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
-		B2EBC1DC1909248300387B71 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2464A0DA190527D400432B9E /* UIKit.framework */; };
+		B2EBC1DC1909248300387B71 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		B2EBC1E21909248300387B71 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B2EBC1E01909248300387B71 /* InfoPlist.strings */; };
 		B2EBC206190927FB00387B71 /* GrowthPush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2BECE4719087DDE00D87478 /* GrowthPush.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
@@ -269,12 +266,6 @@
 		50EF62A017ECD613001EB2F8 /* Icon-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-29.png"; sourceTree = "<group>"; };
 		50EF62A117ECD613001EB2F8 /* Icon-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-50.png"; sourceTree = "<group>"; };
 		B2BECE4719087DDE00D87478 /* GrowthPush.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GrowthPush.framework; path = "../../submodules/growthpush-ios/GrowthPush.framework"; sourceTree = "<group>"; };
-		B2BECE4919087EBC00D87478 /* UIApplication+GrowthPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+GrowthPush.h"; sourceTree = "<group>"; };
-		B2BECE4A19087EBC00D87478 /* UIApplication+GrowthPush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+GrowthPush.m"; sourceTree = "<group>"; };
-		B2BECE4E19087F9400D87478 /* GPAppDelegateIntercepter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPAppDelegateIntercepter.h; sourceTree = "<group>"; };
-		B2BECE4F19087F9400D87478 /* GPAppDelegateIntercepter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPAppDelegateIntercepter.m; sourceTree = "<group>"; };
-		B2BECE591908DC0F00D87478 /* GPAppDelegateWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPAppDelegateWrapper.h; sourceTree = "<group>"; };
-		B2BECE5A1908DC0F00D87478 /* GPAppDelegateWrapperDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPAppDelegateWrapperDelegate.h; sourceTree = "<group>"; };
 		B2DA4A3F190929130040CF3C /* EventTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTests.h; sourceTree = "<group>"; };
 		B2DA4A40190929130040CF3C /* EventTests.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EventTests.mm; sourceTree = "<group>"; };
 		B2DA4A41190929130040CF3C /* GrowthPushTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrowthPushTestCase.h; sourceTree = "<group>"; };
@@ -345,7 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2EBC1DA1909248300387B71 /* XCTest.framework in Frameworks */,
-				B2EBC1DC1909248300387B71 /* UIKit.framework in Frameworks */,
+				B2EBC1DC1909248300387B71 /* (null) in Frameworks */,
 				B2EBC1DB1909248300387B71 /* Foundation.framework in Frameworks */,
 				B2EBC206190927FB00387B71 /* GrowthPush.framework in Frameworks */,
 			);
