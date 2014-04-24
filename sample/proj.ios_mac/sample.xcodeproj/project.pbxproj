@@ -66,14 +66,14 @@
 		B2BECE4819087DDE00D87478 /* GrowthPush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2BECE4719087DDE00D87478 /* GrowthPush.framework */; };
 		B2BECE4B19087EBC00D87478 /* UIApplication+GrowthPush.m in Sources */ = {isa = PBXBuildFile; fileRef = B2BECE4A19087EBC00D87478 /* UIApplication+GrowthPush.m */; };
 		B2BECE5019087F9400D87478 /* GPAppDelegateIntercepter.m in Sources */ = {isa = PBXBuildFile; fileRef = B2BECE4F19087F9400D87478 /* GPAppDelegateIntercepter.m */; };
+		B2DA4A47190929130040CF3C /* EventTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = B2DA4A40190929130040CF3C /* EventTests.mm */; };
+		B2DA4A48190929130040CF3C /* GrowthPushTestCase.mm in Sources */ = {isa = PBXBuildFile; fileRef = B2DA4A42190929130040CF3C /* GrowthPushTestCase.mm */; };
+		B2DA4A49190929130040CF3C /* GrowthPushTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = B2DA4A44190929130040CF3C /* GrowthPushTests.mm */; };
+		B2DA4A4A190929130040CF3C /* TagTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = B2DA4A46190929130040CF3C /* TagTests.mm */; };
 		B2EBC1DA1909248300387B71 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2EBC1D91909248300387B71 /* XCTest.framework */; };
 		B2EBC1DB1909248300387B71 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		B2EBC1DC1909248300387B71 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2464A0DA190527D400432B9E /* UIKit.framework */; };
 		B2EBC1E21909248300387B71 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B2EBC1E01909248300387B71 /* InfoPlist.strings */; };
-		B2EBC202190924D400387B71 /* EventTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = B2EBC1FB190924D400387B71 /* EventTests.mm */; };
-		B2EBC203190924D400387B71 /* GrowthPushTestCase.mm in Sources */ = {isa = PBXBuildFile; fileRef = B2EBC1FD190924D400387B71 /* GrowthPushTestCase.mm */; };
-		B2EBC204190924D400387B71 /* GrowthPushTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = B2EBC1FF190924D400387B71 /* GrowthPushTests.mm */; };
-		B2EBC205190924D400387B71 /* TagTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = B2EBC201190924D400387B71 /* TagTests.mm */; };
 		B2EBC206190927FB00387B71 /* GrowthPush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2BECE4719087DDE00D87478 /* GrowthPush.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -263,19 +263,19 @@
 		B2BECE4F19087F9400D87478 /* GPAppDelegateIntercepter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPAppDelegateIntercepter.m; sourceTree = "<group>"; };
 		B2BECE591908DC0F00D87478 /* GPAppDelegateWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPAppDelegateWrapper.h; sourceTree = "<group>"; };
 		B2BECE5A1908DC0F00D87478 /* GPAppDelegateWrapperDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPAppDelegateWrapperDelegate.h; sourceTree = "<group>"; };
+		B2DA4A3F190929130040CF3C /* EventTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTests.h; sourceTree = "<group>"; };
+		B2DA4A40190929130040CF3C /* EventTests.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EventTests.mm; sourceTree = "<group>"; };
+		B2DA4A41190929130040CF3C /* GrowthPushTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrowthPushTestCase.h; sourceTree = "<group>"; };
+		B2DA4A42190929130040CF3C /* GrowthPushTestCase.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GrowthPushTestCase.mm; sourceTree = "<group>"; };
+		B2DA4A43190929130040CF3C /* GrowthPushTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrowthPushTests.h; sourceTree = "<group>"; };
+		B2DA4A44190929130040CF3C /* GrowthPushTests.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GrowthPushTests.mm; sourceTree = "<group>"; };
+		B2DA4A45190929130040CF3C /* TagTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagTests.h; sourceTree = "<group>"; };
+		B2DA4A46190929130040CF3C /* TagTests.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TagTests.mm; sourceTree = "<group>"; };
 		B2EBC1D81909248300387B71 /* GrowthPushSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GrowthPushSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2EBC1D91909248300387B71 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		B2EBC1DF1909248300387B71 /* GrowthPushSampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GrowthPushSampleTests-Info.plist"; sourceTree = "<group>"; };
 		B2EBC1E11909248300387B71 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B2EBC1E51909248300387B71 /* GrowthPushSampleTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GrowthPushSampleTests-Prefix.pch"; sourceTree = "<group>"; };
-		B2EBC1FA190924D400387B71 /* EventTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventTests.h; path = ../../../../Desktop/GrowthPushSampleTests/EventTests.h; sourceTree = "<group>"; };
-		B2EBC1FB190924D400387B71 /* EventTests.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = EventTests.mm; path = ../../../../Desktop/GrowthPushSampleTests/EventTests.mm; sourceTree = "<group>"; };
-		B2EBC1FC190924D400387B71 /* GrowthPushTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GrowthPushTestCase.h; path = ../../../../Desktop/GrowthPushSampleTests/GrowthPushTestCase.h; sourceTree = "<group>"; };
-		B2EBC1FD190924D400387B71 /* GrowthPushTestCase.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = GrowthPushTestCase.mm; path = ../../../../Desktop/GrowthPushSampleTests/GrowthPushTestCase.mm; sourceTree = "<group>"; };
-		B2EBC1FE190924D400387B71 /* GrowthPushTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GrowthPushTests.h; path = ../../../../Desktop/GrowthPushSampleTests/GrowthPushTests.h; sourceTree = "<group>"; };
-		B2EBC1FF190924D400387B71 /* GrowthPushTests.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = GrowthPushTests.mm; path = ../../../../Desktop/GrowthPushSampleTests/GrowthPushTests.mm; sourceTree = "<group>"; };
-		B2EBC200190924D400387B71 /* TagTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TagTests.h; path = ../../../../Desktop/GrowthPushSampleTests/TagTests.h; sourceTree = "<group>"; };
-		B2EBC201190924D400387B71 /* TagTests.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = TagTests.mm; path = ../../../../Desktop/GrowthPushSampleTests/TagTests.mm; sourceTree = "<group>"; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D44C620B132DFF330009C878 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
@@ -534,14 +534,14 @@
 		B2EBC1DD1909248300387B71 /* GrowthPushSampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				B2EBC1FA190924D400387B71 /* EventTests.h */,
-				B2EBC1FB190924D400387B71 /* EventTests.mm */,
-				B2EBC1FC190924D400387B71 /* GrowthPushTestCase.h */,
-				B2EBC1FD190924D400387B71 /* GrowthPushTestCase.mm */,
-				B2EBC1FE190924D400387B71 /* GrowthPushTests.h */,
-				B2EBC1FF190924D400387B71 /* GrowthPushTests.mm */,
-				B2EBC200190924D400387B71 /* TagTests.h */,
-				B2EBC201190924D400387B71 /* TagTests.mm */,
+				B2DA4A3F190929130040CF3C /* EventTests.h */,
+				B2DA4A40190929130040CF3C /* EventTests.mm */,
+				B2DA4A41190929130040CF3C /* GrowthPushTestCase.h */,
+				B2DA4A42190929130040CF3C /* GrowthPushTestCase.mm */,
+				B2DA4A43190929130040CF3C /* GrowthPushTests.h */,
+				B2DA4A44190929130040CF3C /* GrowthPushTests.mm */,
+				B2DA4A45190929130040CF3C /* TagTests.h */,
+				B2DA4A46190929130040CF3C /* TagTests.mm */,
 				B2EBC1DE1909248300387B71 /* Supporting Files */,
 			);
 			path = GrowthPushSampleTests;
@@ -814,10 +814,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2EBC203190924D400387B71 /* GrowthPushTestCase.mm in Sources */,
-				B2EBC204190924D400387B71 /* GrowthPushTests.mm in Sources */,
-				B2EBC205190924D400387B71 /* TagTests.mm in Sources */,
-				B2EBC202190924D400387B71 /* EventTests.mm in Sources */,
+				B2DA4A48190929130040CF3C /* GrowthPushTestCase.mm in Sources */,
+				B2DA4A49190929130040CF3C /* GrowthPushTests.mm in Sources */,
+				B2DA4A4A190929130040CF3C /* TagTests.mm in Sources */,
+				B2DA4A47190929130040CF3C /* EventTests.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
