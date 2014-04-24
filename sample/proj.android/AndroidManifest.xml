@@ -12,7 +12,7 @@
         android:icon="@drawable/icon"
         android:label="@string/app_name" >
         <activity
-            android:name="org.cocos2dx.cpp.AppActivity"
+            android:name="com.growthpush.sample.AppActivity"
             android:configChanges="orientation"
             android:label="@string/app_name"
             android:launchMode="singleTask"
