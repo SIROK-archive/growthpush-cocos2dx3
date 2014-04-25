@@ -6,6 +6,15 @@ Growth Push SDK for Cocos2d-x
 Growth Push is the easiest way to implement push notification and analyzes your notification for smart devices.
 https://growthpush.com
 
+How To Build Sample Project
+1. Open XcodeProject
+2. Click projectfile and move to "Build Phases"
+3. Open toggle "Target Dependencies" and click "+".
+4. Add "cocos2dx iOS", "cocos2dx-extensions iOS", "chipmunk iOS", "box2d iOS" and "CocosDension iOS" Files.
+5. Open toggle "Link Binary With Libraries" and clieck "+"
+6. Add "libbox2d iOS.a", "libchipmunk iOS.a", "libcocos2dx iOS.a", "libcocos2dx-extensions iOS.a" and "libCocosDension iOS.a".
+7. Build.
+
 Install
 ----------------
 Common
