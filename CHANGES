@@ -1,3 +1,5 @@
-= 1.0.0 (2013-12-09)
+= 1.1.0 (2014-04-25)
 
-* Implement iOS/Android Cocos2d-x API.
+* Add binary library.
+* Add sample project.
+* Implement iOS/Android Cocos2d-x API for 3.x.
