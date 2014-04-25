@@ -56,11 +56,12 @@ AndroidManifest.xml
             </intent-filter>
         </activity>
         
-        <activity android:name="com.growthpush.view.AlertActivity"
+        <activity android:name="com.growthpush.view.AlertActivity" 
                   android:configChanges="orientation|keyboardHidden"
                   android:launchMode="singleInstance"
                   android:theme="@android:style/Theme.Translucent" />
-        <receiver android:name="com.growthpush.cocos2dx.GPCocos2dxBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+
+        <receiver android:name="com.growthpush.cocos2dx.Cocos2dxBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND" >
                 <intent-filter>
                         <action android:name="com.google.android.c2dm.intent.RECEIVE" />
                         <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
