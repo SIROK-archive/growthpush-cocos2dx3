@@ -157,12 +157,6 @@ void GrowthPush::setOpenNotificationCallback(Application *target, GPRemoteNotifi
     s_target = target;
     s_selector = selector;
 
-    JniMethodInfo t;
-
-    if (JniHelper::getStaticMethodInfo(t, JavaClassName, "callTrackGrowthPushMessage", "()V")) {
-        t.env->CallStaticVoidMethod(t.classID, t.methodID);
-        t.env->DeleteLocalRef(t.classID);
-    }
 }
 
 #endif
