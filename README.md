@@ -3,16 +3,19 @@ growthpush-cocos2dx for Cocos2d-x 3.0
 
 Growth Push SDK for Cocos2d-x
 
+Growth Push is the easiest way to implement push notification and analyzes your notification for smart devices.
+https://growthpush.com
+
 Install
 ----------------
 Common
 ----------------
-1. Copy "src/Classes/GrowthPush" to "/path/to/your_project/Classes/"
+1. Copy "Classes/GrowthPush" to "/path/to/your_project/Classes/"
 
 iOS　→　(http://blog.growthpush.com/post/71159185584/ios-cocos2d-x)
 ----------------
 1. Copy "GrowthPush.framework" library to "/path/to/your_project/proj.ios/Frameworks/"
-2. Add "Security.framework" library to your Xcode project
+2. Add "Security.framework" library to your Xcode project (and also SystemConfiguration.framework and MobileCoreServices.framework, if needed)
 3. Add "/path/to/your_project/Classes/GrowthPush" to Xcode
 
 Android　→　(http://blog.growthpush.com/post/74729590395/android-cocos2d-x)
@@ -21,14 +24,13 @@ Android　→　(http://blog.growthpush.com/post/74729590395/android-cocos2d-x)
       * android-support-v4.jar
       * google-play-services.jar
       * growthpush.jar
-2. Edit your project's AndroidManifest.xml
+2. Copy "proj.android/src/com" to "/path/to/your_project/proj.android/src"
+3. Edit your project's AndroidManifest.xml
       * Insert GrowthPush activity setting
       * Insert uses-permission setting
-3. Copy "src/proj.android/src/com" to "/path/to/your_project/proj.android/src"
 4. Add build path to your project's Android.mk
       * LOCAL_SRC_FILES := ../../Classes/GrowthPush/android/GrowthPush.cpp
       * LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes/GrowthPush
-5. Modified "Cocos2dxActivity" to "GPCocos2dxActivity" in your project MainActivity class
 
 Example
 
@@ -72,20 +74,8 @@ AndroidManifest.xml
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.GET_TASKS" />
     <permission android:name="jp.example.sample.permission.C2D_MESSAGE" android:protectionLevel="signature" />
     <uses-permission android:name="jp.example.sample.permission.C2D_MESSAGE" />
-```
-
-AppActivity.java
-
-```
-package org.cocos2dx.cpp;
-
-import com.growthpush.cocos2dx.GPCocos2dxActivity;
-
-public class AppActivity extends GPCocos2dxActivity {
-}
 ```
 
 Cocos2d-x usage
