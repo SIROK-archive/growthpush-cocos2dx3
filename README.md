@@ -79,6 +79,18 @@ public class AppActivity extends Cocos2dxActivity {
 }
 ```
 
+Easier way is adding GrowthPushCocos2dxActivity instead of AppActivity to AndroidManifest.xml as LAUNCHER
+
+```
+<activity android:name="com.growthpush.cocos2dx.GrowthPushCocos2dxActivity" ... >
+  ...
+  <intent-filter>
+    <action android:name="android.intent.action.MAIN" />
+    <category android:name="android.intent.category.LAUNCHER" />
+  </intent-filter>
+</activity>
+```
+
 ## Tracking events and setting tags.
 
 
