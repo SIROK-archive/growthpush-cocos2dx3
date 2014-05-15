@@ -20,6 +20,12 @@ public:
     @return false   Initialize failed, app terminate.
     */
     virtual bool applicationDidFinishLaunching();
+    
+    /**
+     * @brief   Callback function called when notification is opened.
+     * @param extra Push notification parameters and custom fields
+     */
+    virtual void didLaunchWithNotification(cocos2d::Value extra);
 
     /**
     @brief  The function be called when the application enter background
@@ -32,6 +38,7 @@ public:
     @param  the pointer of the application
     */
     virtual void applicationWillEnterForeground();
+    
 };
 
 #endif // _APP_DELEGATE_H_

@@ -1,7 +1,9 @@
 #include "AppDelegate.h"
 #include "HelloWorldScene.h"
+#include "GrowthPush.h"
 
 USING_NS_CC;
+USING_NS_GROWTHPUSH;
 
 AppDelegate::AppDelegate() {
 
@@ -31,8 +33,24 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     // run
     director->runWithScene(scene);
+    
+    GrowthPush::initialize(1074, "sH2RhzDPNZKmXAKwqtG6pHNvDalIGk54", GPEnvironmentDevelopment, true);
+    GrowthPush::registerDeviceToken("870898687785");
+    GrowthPush::trackEvent("Launch");
+    GrowthPush::setDeviceTags();
+    GrowthPush::clearBadge();
+    GrowthPush::setOpenNotificationCallback(this, gp_remote_notification_selector(AppDelegate::didLaunchWithNotification));
 
     return true;
+}
+
+void AppDelegate::didLaunchWithNotification(Value extra) {
+    
+    CCLOG("%s", extra.getDescription().c_str());
+    auto growthpushCustomField = extra.asValueMap()["growthpush"].asValueMap();
+    auto notificationId = growthpushCustomField["notificationId"];
+    GrowthPush::trackEvent("Launch via push notification", notificationId.asString());
+    
 }
 
 // This function will be called when the app is inactive. When comes a phone call,it's be invoked too
