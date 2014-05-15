@@ -1,10 +1,13 @@
 {
     "ndk_module_path" :[
-        "../../submodules/cocos2d-x",
-        "../../submodules/cocos2d-x/cocos",
-        "../../submodules/cocos2d-x/external"
+        "../cocos2d",
+        "../cocos2d/cocos",
+        "../cocos2d/external"
     ],
-    "copy_to_assets" :[
-        "../Resources/"
+    "copy_resources": [
+        {
+            "from": "../Resources",
+            "to": ""
+        }
     ]
 }
