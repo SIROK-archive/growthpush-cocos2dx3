@@ -67,3 +67,20 @@ for CLASS in ${JAVA_CLASSES[@]}; do
 		exit 1;
 	fi
 done
+
+SUBMODULES=( \ 
+	'growthpush-ios' \ 
+	'growthpush-android' \ 
+)
+
+for SUBMODULE in ${SUBMODULES[@]}; do
+	echo -n "Check submodule ${SUBMODULE}... "
+	${ROOT_DIR}/submodules/${SUBMODULE}/tools/verify
+	if [ $? -ne 0 ]; then
+		echo 'does NOT exist.'
+		echo '[FATAL] Failed to verify package.'
+		exit 1;
+	fi
+done
+
+echo '[SUCCESS] Completed to verify package.'
