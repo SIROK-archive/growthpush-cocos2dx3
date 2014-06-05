@@ -1,3 +1,13 @@
+= 1.1.2 (2014-06-05)
+
+* Update growthpush-android to latest version
+
+= 1.1.1 (2014-05-15)
+
+* Update cocos2d-x to release version
+* Update growthpush-ios and growthpush-android to latest version
+* Renew sample project
+
 = 1.1.0 (2014-04-25)
 
 * Add binary library.
