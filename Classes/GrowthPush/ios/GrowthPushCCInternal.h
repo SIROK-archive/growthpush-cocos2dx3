@@ -4,7 +4,7 @@
 //  Created by TSURUDA Ryo on 2013/12/09.
 //
 
-#include "CCPlatformConfig.h"
+#include "ccConfig.h"
 #if CC_TARGET_PLATFORM == CC_PLATFORM_IOS
 
 #import <Foundation/Foundation.h>

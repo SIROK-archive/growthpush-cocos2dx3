@@ -7,7 +7,7 @@
 //  Copyright (c) 2013年 TSURUDA Ryo. All rights reserved.
 //
 
-#include "CCPlatformConfig.h"
+#include "ccConfig.h"
 #if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
 
 # include "GrowthPush.h"

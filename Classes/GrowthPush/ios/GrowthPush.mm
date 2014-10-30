@@ -5,7 +5,7 @@
 //  Created by TSURUDA Ryo on 2013/12/07.
 //
 
-#include "CCPlatformConfig.h"
+#include "ccConfig.h"
 #if CC_TARGET_PLATFORM == CC_PLATFORM_IOS
 
 # include "GrowthPush.h"
