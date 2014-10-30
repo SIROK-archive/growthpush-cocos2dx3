@@ -5,7 +5,7 @@
 //
 //
 
-#include "CCPlatformConfig.h"
+#include "ccConfig.h"
 #if CC_TARGET_PLATFORM == CC_PLATFORM_IOS
 
 #import <UIKit/UIKit.h>
