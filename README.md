@@ -1,8 +1,7 @@
 > ## :warning: Deprecation Notice
 
 > Growth Push SDK for Cocos2d-x 3.x will be depricated becasue all SDK are integrated with Growthbeat SDK. Please use its SDK instead:
-> * [Growthbeat SDK for iOS](https://github.com/SIROK/growthbeat-ios/)
-> * [Growthbeat SDK for Android](https://github.com/SIROK/growthbeat-android/)
+> * [Growthbeat SDK for Cocos2d-x](https://github.com/SIROK/growthbeat-cocos2dx)
 
 Growth Push SDK for Cocos2d-x 3.x
 ===================
